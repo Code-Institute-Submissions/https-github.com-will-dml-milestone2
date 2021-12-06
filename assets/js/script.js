@@ -10,7 +10,7 @@ let choiceC = document.getElementById('C');
 let choiceD = document.getElementById('D');
 let submitButton = document.getElementsByClassName('submit-button');
 let counter = document.getElementById('counter');
-let returnedAnswer = document.getElementById('returned-answer');
+let acceptedAnswer = document.getElementById('accepted-answer');
 
 let questions = [
     {
@@ -57,4 +57,9 @@ let questions = [
  let gameStartButton = document.createElement('button')
  gameStartButton.textContent = "Start the game!"
  startDiv.appendChild(gameRules, gameStartButton);
+
+ let endDiv = document.createElement('div');
+ let endGameMsg = document.createElement('p')
+ endGameMsg.textContent = "Well done for getting this far! You have a result of :[], feel free to try again if you want to improve and learn while having fun!";
+ endDiv.appendChild(endGameMsg, gameStartButton)
 
