@@ -2,6 +2,7 @@
  * Create variables for every elements needed.
  */
 
+let gameArea = document.getElementsByClassName('game-area')
 let article = document.getElementsByClassName('wiki-article');
 let choiceA = document.getElementById('A');
 let choiceB = document.getElementById('B');
@@ -9,7 +10,7 @@ let choiceC = document.getElementById('C');
 let choiceD = document.getElementById('D');
 let submitButton = document.getElementsByClassName('submit-button');
 let counter = document.getElementById('counter');
-let returnAnswer = document.getElementById('return-answer');
+let returnedAnswer = document.getElementById('returned-answer');
 
 let questions = [
     {
@@ -34,14 +35,26 @@ let questions = [
         article : "The area currently known as [...] has long served as a thoroughfare for many other nations and cultures.Merv is one of the oldest oasis-cities in Central Asia and was once the biggest city in the world.In medieval times, Merv was also one of the great cities of the Islamic world and an important stop on the Silk Road. Annexed by the Russian Empire in 1881, [...] later figured prominently in the anti-Bolshevik movement in Central Asia.",
         choiceA : "Turkey",
         choiceB : "Turqmenistan",
-        choiceC : "Georgia"
+        choiceC : "Georgia",
         choiceD : "Kazakhstan"
     },{
         article : "[...] was formed in 1859 through a personal union of the Danubian Principalities of Moldavia and Wallachia. The new state, officially named since 1866, gained independence from the Ottoman Empire in 1877.During World War I, after declaring its neutrality in 1914,[...] fought together with the Allied Powers from 1916. In the aftermath of the war, Bukovina, Bessarabia, Transylvania and parts of Banat, Crișana, and Maramureș became part of the Kingdom of [...].",
-        choiceA : "Moldavia"
-        choiceB : "Bulgaria"
-        choiceC : "Romania"
+        choiceA : "Moldavia",
+        choiceB : "Bulgaria",
+        choiceC : "Romania",
         choiceD : "Hungary"
     }
 
 ]
+
+/**
+ * Create new elements for game introduction
+ */
+
+ let startDiv = document.createElement('div')
+ let gameRules = document.createElement('p')
+ gameRules.textContent = "Hello and welcome to Geo-Mania ! Here you'll get to test your knowledge about countries all around the world. A piece of article from Wikipedia will be display to help you guess the country ! Good luck ";
+ let gameStartButton = document.createElement('button')
+ gameStartButton.textContent = "Start the game!"
+ startDiv.appendChild(gameRules, gameStartButton);
+

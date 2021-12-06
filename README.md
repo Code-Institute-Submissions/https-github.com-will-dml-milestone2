@@ -9,7 +9,7 @@ We have about 4 days to deploy final release on 8th December, 2021
 - [ ] array and it's functions [learn on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 - [ ] JS manipulate html element attributes esp styling
 - [ ] JS dictionary
-- [ ] JS randomization `extra` (use for selected random unanwsered questions to make the quiz more fun
+- [ ] JS randomization `extra` (use for selected random unanwsered questions to make the quiz more fun)
 - [ ] set interval (optional) [learn on MDN](https://developer.mozilla.org/en-US/docs/Web/API/setInterval)
 
 ### Features
