@@ -16,7 +16,7 @@ We have about 4 days to deploy final release on 8th December, 2021
 Here are the list of features ordered in preference
 
 #### Must have
-- [ ] users can be able to view questions which should be a question at a time (consider js nested array and dictionary with array https://www.w3schools.com/js/js_objects.asp) `20 hours from now`
+- [ ] users can be able to view questions which should be a question at a time (consider js nested array and dictionary with array https://www.w3schools.com/js/js_objects.asp) 
 - [ ] the quiz must have an ending where users can see their result
 
 #### Should have
