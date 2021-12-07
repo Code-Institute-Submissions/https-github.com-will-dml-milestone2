@@ -47,20 +47,3 @@ let questions = [
 
 ]
 
-/**
- * Create new elements for game introduction
- */
-
- let startDiv = document.createElement('div')
- let gameRules = document.createElement('p')
- gameRules.textContent = "Hello and welcome to Geo-Mania ! Here you'll get to test your knowledge about countries all around the world. A piece of article from Wikipedia will be display to help you guess the country ! Good luck ";
- let gameStartButton = document.createElement('button')
- gameStartButton.textContent = "Start the game!"
- startDiv.appendChild(gameRules, gameStartButton);
-
- let endDiv = document.createElement('div');
- let endGameMsg = document.createElement('p')
- endGameMsg.textContent = "Well done for getting this far! You have a result of :[], feel free to try again if you want to improve and learn while having fun!";
- endDiv.appendChild(endGameMsg, gameStartButton)
-
-document.getElementsByClassName('game-area').style.display= "none"

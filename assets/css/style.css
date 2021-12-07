@@ -17,7 +17,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
-    display:flexbox;
+    display:none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -108,4 +108,26 @@ body {
 /*Counter*/
 #counter {
     font-size: 120%;
+}
+
+/*End game*/
+
+.game-end {
+    background-color: #9fd3c7;
+    box-sizing: border-box;
+    border: 15px solid #142d4c;
+    width: 85%;
+    height: 400px;
+    overflow: visible;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+    display:flexbox;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.game-end-txt {
+    padding: 40px;
 }
