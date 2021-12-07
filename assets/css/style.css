@@ -4,6 +4,38 @@ body {
     font-family: 'Balsamiq Sans', cursive;
 }
 
+/*Game intro*/
+
+.game-intro {
+    background-color: #9fd3c7;
+    box-sizing: border-box;
+    border: 15px solid #142d4c;
+    width: 85%;
+    height: 400px;
+    overflow: visible;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+    display:flexbox;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.game-intro-txt {
+    padding: 40px;
+}
+
+.start-game-button {
+    box-sizing: border-box;
+    border: 5px solid #142d4c;
+    width: 20px;
+    height: 20px;
+    font-size: 140%;
+    margin-top: 50px;
+    padding: 5px 5px;
+}
+
 /*Heading*/
 
 .heading {
@@ -24,7 +56,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
-    display: flexbox;
+    display: none;
     flex-direction: column;
     justify-content: center;
 }

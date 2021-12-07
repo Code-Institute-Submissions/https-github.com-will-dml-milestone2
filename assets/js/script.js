@@ -63,3 +63,4 @@ let questions = [
  endGameMsg.textContent = "Well done for getting this far! You have a result of :[], feel free to try again if you want to improve and learn while having fun!";
  endDiv.appendChild(endGameMsg, gameStartButton)
 
+document.getElementsByClassName('game-area').style.display= "none"
