@@ -2,7 +2,7 @@ body {
     background-color: #ececec; 
     text-align: center;
     font-family: 'Balsamiq Sans', cursive;
-    background-image: none;
+    background-image: url('../assets/img/international-g0eaefd211_1280.jpg');
     background-size: cover;
 }
 
@@ -25,7 +25,8 @@ body {
     align-items: center;
 }
 .game-intro-txt {
-    padding: 40px;
+    padding: 20px;
+    font-size: 140%;
 }
 
 .start-game-button {
@@ -34,7 +35,9 @@ body {
     width: fit-content;
     height: fit-content;
     font-size: 140%;
-    margin-top: 50px;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 10px;
     padding: 5px 5px;
 }
 
@@ -86,15 +89,17 @@ body {
 .answers {
     display: inline-block;
     padding: 10px 40px;
+    margin: 0px 10px;
     margin-top: 40px;
     border-style: solid;
     font-weight: bold;
+    font-size: 120%;
     background-color: #ececec;
 }
 
 /*Submit button*/
 
-.submit-button {
+/*.submit-button {
     display: flexbox;
     justify-items: center;
     margin-top: 50px;
@@ -105,11 +110,13 @@ body {
     height: fit-content;
     font-size: 120%;
     font-weight: bold;
-}
+}*/
 
 /*Counter*/
 #counter {
-    font-size: 120%;
+    font-size: 140%;
+    margin: 20px 20px;
+    padding: 10px 10px;
 }
 
 /*End game*/
