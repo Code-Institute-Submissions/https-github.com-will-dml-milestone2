@@ -2,10 +2,10 @@
  * Create variables for every elements needed.
  */
 
-var gameArea = document.getElementById('game-box');
-var gameIntro = document.getElementById('game-start');
-var gameEnd = document.getElementById('game-ending');
-var startButton = document.getElementsByClassName('start-game-button');
+var gameArea = document.getElementsByClassName('game-area')[0];
+var gameIntro = document.getElementsByClassName('game-intro')[0];
+var gameEnd = document.getElementsByClassName('game-end')[0];
+var startButton = document.getElementsByClassName('start-game-button')[0];
 var article = document.getElementsByClassName('wiki-article');
 var choiceA = document.getElementById('A');
 var choiceB = document.getElementById('B');
@@ -57,6 +57,8 @@ let questions = [
 function startGame(event) {
     gameIntro.style.display = 'none';
     gameArea.style.display = 'flexbox';
+    
 }
+
  
-startButton.addEventListener("click", startGame)
+startButton.addEventListener("click", startGame);
