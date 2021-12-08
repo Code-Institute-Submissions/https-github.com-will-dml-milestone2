@@ -2,9 +2,9 @@
  * Create variables for every elements needed.
  */
 
-var gameArea = document.getElementsByClassName('game-area');
-var gameIntro = document.getElementsByClassName('game-intro');
-var gameEnd = document.getElementsByClassName('game-end');
+var gameArea = document.getElementById('game-box');
+var gameIntro = document.getElementById('game-start');
+var gameEnd = document.getElementById('game-ending');
 var startButton = document.getElementsByClassName('start-game-button');
 var article = document.getElementsByClassName('wiki-article');
 var choiceA = document.getElementById('A');
@@ -54,10 +54,9 @@ let questions = [
  * Add functions to the game
  */
 
-function startGame() {
+function startGame(event) {
     gameIntro.style.display = 'none';
     gameArea.style.display = 'flexbox';
-    gameArea.innerHtml = 'questions'[Math.random]
 }
  
 startButton.addEventListener("click", startGame)
