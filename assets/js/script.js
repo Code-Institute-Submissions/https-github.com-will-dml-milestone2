@@ -107,11 +107,11 @@ function renderQuestion(){
 
 
 function checkAnswer(answer){
-    if(questions[runningQuestionIndex].correct == answer){
+    if(questions[runningQuestion].correct == answer){
         acceptedAnswer++;
     }
-    if(runningQuestionIndex < lastQuestionIndex){
-        questionRender();
+    if(runningQuestion < lastQuestion){
+        renderQuestion();
     }else{
         endGame();
     }
@@ -126,14 +126,17 @@ function checkAnswer(answer){
 //Game progress
 
 function gameProgress(){
-    for(let qIndex = 0; qIndex <= lastQuestion; qIndex++){
+    for(let q = 0; q <= lastQuestion; q++){
         totalAnswer++;
     }
 }
 
 // Game Ending 
 
+let score = acceptedAnswer+totalAnswer
+
 function endGame(){
     gameArea.style.display = 'none';
     gameEnd.style.display = 'flex';
+
 }
