@@ -85,12 +85,15 @@ startButton.addEventListener("click", startGame,);
 
 // render a question
 
-const lastQuestion = questions.length - 1;
-let runningQuestion = 0;
-let q = questions[runningQuestion];
+const numberOfQuestions = questions.length - 1;
+let currentQuestionIndex = 0;
+
 
 
 function renderQuestion(){
+
+    let q = questions[currentQuestionIndex];
+
     articleWiki.innerHTML = q.article ;
     choiceA.innerHTML = q.choiceA;
     choiceB.innerHTML = q.choiceB;
@@ -107,10 +110,12 @@ function renderQuestion(){
 
 
 function checkAnswer(answer){
-    if(questions[runningQuestion].correct == answer){
+    if(questions[currentQuestionIndex].correct == answer){
         acceptedAnswer++;
     }
-    if(runningQuestion < lastQuestion){
+    currentQuestionIndex++
+
+    if(currentQuestionIndex < numberOfQuestions){
         renderQuestion();
     }else{
         endGame();
@@ -126,7 +131,7 @@ function checkAnswer(answer){
 //Game progress
 
 function gameProgress(){
-    for(let q = 0; q <= lastQuestion; q++){
+    for(let q = 0; q <= numberOfQuestions; q++){
         totalAnswer++;
     }
 }
@@ -139,4 +144,12 @@ function endGame(){
     gameArea.style.display = 'none';
     gameEnd.style.display = 'flex';
 
+}
+let playAgainButton = document.getElementsByClassName('play-again')[0];
+playAgainButton.addEventListener('click', playAgain);
+
+
+function playAgain(){
+    gameEnd.style.display = 'none';
+    startGame()
 }
