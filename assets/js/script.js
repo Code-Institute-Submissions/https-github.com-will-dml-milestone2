@@ -67,15 +67,41 @@ let questions = [
  */
 
 paragraphs="";
-
+ // game start
 function startGame(event) {
     gameIntro.style.display = 'none';
     gameArea.style.display = 'flex';
-    for (let i in questions) {
-        paragraphs += `<p>${questions[i]}</p>`;
+    
     }
+
+
+startButton.addEventListener("click", startGame, renderQuestion);
+
+
+// render a question
+
+const lastQuestion = questions.length - 1;
+let runningQuestion = 0;
+
+
+function renderQuestion(){
+
+    let q = questions[runningQuestion];
+
+    question.innerHTML = "<p>"+ q.question +"</p>";
+
+    choiceA.innerHTML = q.choiceA;
+    choiceB.innerHTML = q.choiceB;
+    choiceC.innerHTML = q.choiceC;
+    choiceC.innerHTML = q.choiceC;
+
 }
 
-startButton.addEventListener("click", startGame);
+// Check answer
+
+function checkAnswer(){
+    
+}
+
 
 
