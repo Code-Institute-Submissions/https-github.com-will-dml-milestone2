@@ -17,7 +17,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
-    display:none;
+    display:flexbox;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -29,8 +29,8 @@ body {
 .start-game-button {
     box-sizing: border-box;
     border: 5px solid #142d4c;
-    width: 20px;
-    height: 20px;
+    width: fit-content;
+    height: fit-content;
     font-size: 140%;
     margin-top: 50px;
     padding: 5px 5px;
@@ -123,7 +123,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
-    display:flexbox;
+    display:none;
     flex-direction: column;
     justify-content: center;
     align-items: center;

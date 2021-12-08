@@ -2,15 +2,18 @@
  * Create variables for every elements needed.
  */
 
-let gameArea = document.getElementsByClassName('game-area')
-let article = document.getElementsByClassName('wiki-article');
-let choiceA = document.getElementById('A');
-let choiceB = document.getElementById('B');
-let choiceC = document.getElementById('C');
-let choiceD = document.getElementById('D');
-let submitButton = document.getElementsByClassName('submit-button');
-let counter = document.getElementById('counter');
-let acceptedAnswer = document.getElementById('accepted-answer');
+var gameArea = document.getElementsByClassName('game-area');
+var gameIntro = document.getElementsByClassName('game-intro');
+var gameEnd = document.getElementsByClassName('game-end');
+var startButton = document.getElementsByClassName('start-game-button');
+var article = document.getElementsByClassName('wiki-article');
+var choiceA = document.getElementById('A');
+var choiceB = document.getElementById('B');
+var choiceC = document.getElementById('C');
+var choiceD = document.getElementById('D');
+var submitButton = document.getElementsByClassName('submit-button');
+var counter = document.getElementById('counter');
+var acceptedAnswer = document.getElementById('accepted-answer');
 
 let questions = [
     {
@@ -47,3 +50,14 @@ let questions = [
 
 ]
 
+/**
+ * Add functions to the game
+ */
+
+function startGame() {
+    gameIntro.style.display = 'none';
+    gameArea.style.display = 'flexbox';
+    gameArea.innerHtml = 'questions'[Math.random]
+}
+ 
+startButton.addEventListener("click", startGame)
