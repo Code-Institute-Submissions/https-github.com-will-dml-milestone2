@@ -2,6 +2,8 @@ body {
     background-color: #ececec; 
     text-align: center;
     font-family: 'Balsamiq Sans', cursive;
+    background-image: none;
+    background-size: cover;
 }
 
 /*Game intro*/
@@ -71,7 +73,7 @@ body {
     
     
 }
-.wiki-article {
+#wiki-article {
     font-size: 150%;
     font-style: italic;
     

@@ -6,7 +6,7 @@ var gameArea = document.getElementById('game-box');
 var gameIntro = document.getElementsByClassName('game-intro')[0];
 var gameEnd = document.getElementsByClassName('game-end')[0];
 var startButton = document.getElementsByClassName('start-game-button')[0];
-var articleWiki = document.getElementsByClassName('wiki-article')[0];
+var articleWiki = document.getElementById('wiki-article');
 var choiceA = document.getElementById('A');
 var choiceB = document.getElementById('B');
 var choiceC = document.getElementById('C');
@@ -22,6 +22,7 @@ let questions = [
         choiceB : "Columbia",
         choiceC : "Uruguay",
         choiceD : "Bolivia",
+        imgSrc : "url('../assets/img/river-g6ccf30427_1280.jpg')"
         
         
     },{
@@ -30,13 +31,14 @@ let questions = [
         choiceB : "Laos",
         choiceC : "Cambodia",
         choiceD : "Vietnam",
-        
+        imgSrc : "url('../assets/img/blind-stretch-comb-g8d1015378_1280.jpg')"
     },{
         article : "[...] has several regions: a desert zone in the north, an arid Sahelian belt in the centre and a more fertile Sudanian Savanna zone in the south. Lake [...], after which the country is named, is the second-largest wetland in Africa. [...]'s official languages are Arabic and French. It is home to over 200 different ethnic and linguistic groups. Islam (51.8%) and Christianity (44.1%) are the main religions practiced in [...].",
         choiceA : "Mozambique",
         choiceB : "Ethiopia",
         choiceC : "Gambia",
         choiceD : "Chad",
+        imgSrc : "url('../assets/img/caravan-gd48ee82a3_1280.jpg')"
         
     },{
         article : "The area currently known as [...] has long served as a thoroughfare for many other nations and cultures.Merv is one of the oldest oasis-cities in Central Asia and was once the biggest city in the world.In medieval times, Merv was also one of the great cities of the Islamic world and an important stop on the Silk Road. Annexed by the Russian Empire in 1881, [...] later figured prominently in the anti-Bolshevik movement in Central Asia.",
@@ -44,6 +46,7 @@ let questions = [
         choiceB : "Turqmenistan",
         choiceC : "Georgia",
         choiceD : "Kazakhstan",
+        imgSrc : "url('horse-urgensh-g9753c1ee3_1280.jpg')"
         
     },{
         article : "[...] was formed in 1859 through a personal union of the Danubian Principalities of Moldavia and Wallachia. The new state, officially named since 1866, gained independence from the Ottoman Empire in 1877.During World War I, after declaring its neutrality in 1914,[...] fought together with the Allied Powers from 1916. In the aftermath of the war, Bukovina, Bessarabia, Transylvania and parts of Banat, Crișana, and Maramureș became part of the Kingdom of [...].",
@@ -51,6 +54,7 @@ let questions = [
         choiceB : "Bulgaria",
         choiceC : "Romania",
         choiceD : "Hungary",
+        imgSrc : "url('transilvania-g55524fa54_1280.jpg')"
         }
         
     
@@ -62,6 +66,7 @@ let questions = [
  */
 
  // game start
+
 function startGame(event) {
     gameIntro.style.display = 'none';
     gameArea.style.display = 'flex';
@@ -81,17 +86,25 @@ let q = questions[runningQuestion];
 
 
 function renderQuestion(){
-    
-    gameArea.innerHTML = q.article ;
+    console.log('about to render questions');
+    articleWiki.innerHTML = q.article ;
     choiceA.innerHTML = q.choiceA;
     choiceB.innerHTML = q.choiceB;
     choiceC.innerHTML = q.choiceC;
     choiceD.innerHTML = q.choiceD;
+    document.body.style.backgroundImage = q.imgSrc;
 
 }
+
+//select choice
+
 
 // Check answer
 
 
 
+//Go to next question 
 
+
+
+// Game Ending 
