@@ -66,13 +66,14 @@ let questions = [
  * Add functions to the game
  */
 
-
+paragraphs="";
 
 function startGame(event) {
     gameIntro.style.display = 'none';
     gameArea.style.display = 'flex';
-    var question1 = questions[Math.floor(Math.random()*questions.length)];
-    gameArea.innerText = question1
+    for (let i in questions) {
+        paragraphs += `<p>${questions[i]}</p>`;
+    }
 }
 
 startButton.addEventListener("click", startGame);
