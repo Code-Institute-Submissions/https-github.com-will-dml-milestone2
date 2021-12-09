@@ -98,7 +98,7 @@ body {
     font-size: 120%;
     background-color: #ececec;
 }
-answers:hover {
+.answers:hover {
     background-color: #9fd3c7;
 }
 

@@ -27,7 +27,7 @@ let questions = [
         
         
     },{
-        article : '"Present-day [...] traces its historic and cultural identity to Lan Xang, which existed from the 14th century to the 18th century as one of the largest kingdoms in Southeast Asia. Because of its central geographical location in Southeast Asia, the kingdom became a hub for overland trade and became wealthy economically and culturally.After a period of internal conflict, Lan Xang broke into three separate kingdoms—Luang Phrabang, Vientiane, and Champasak."',
+        article : '<p>"Present-day [...] traces its historic and cultural identity to Lan Xang, which existed from the 14th century to the 18th century as one of the largest kingdoms in Southeast Asia.</p> Because of its central geographical location in Southeast Asia, the kingdom became a hub for overland trade and became wealthy economically and culturally.After a period of internal conflict, Lan Xang broke into three separate kingdoms—Luang Phrabang, Vientiane, and Champasak."',
         choiceA : "Thailand",
         choiceB : "Laos",
         choiceC : "Cambodia",
@@ -53,7 +53,7 @@ let questions = [
         correct : "B"
         
     },{
-        article : '"[...] was formed in 1859 through a personal union of the Danubian Principalities of Moldavia and Wallachia. The new state, officially named since 1866, gained independence from the Ottoman Empire in 1877.During World War I, after declaring its neutrality in 1914,[...] fought together with the Allied Powers from 1916. In the aftermath of the war, Bukovina, Bessarabia, Transylvania and parts of Banat, Crișana, and Maramureș became part of the Kingdom of [...]."',
+        article : '"[...] was formed in 1859 through a personal union of the Danubian Principalities of Moldavia and Wallachia. The new state, officially named since 1866, gained independence from the Ottoman Empire in 1877.<p>During World War I, after declaring its neutrality in 1914,[...] fought together with the Allied Powers from 1916. In the aftermath of the war, Bukovina, Bessarabia, Transylvania and parts of Banat, Crișana, and Maramureș became part of the Kingdom of [...]."</p>',
         choiceA : "Moldavia",
         choiceB : "Bulgaria",
         choiceC : "Romania",
