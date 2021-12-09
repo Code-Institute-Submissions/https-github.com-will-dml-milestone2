@@ -12,12 +12,12 @@ var choiceB = document.getElementById('B');
 var choiceC = document.getElementById('C');
 var choiceD = document.getElementById('D');
 var answers = document.getElementsByClassName('answers');
-let totalAnswer = document.getElementById('total-answer') == 0;
-let acceptedAnswer = document.getElementById('accepted-answer') == 0;
+let totalAnswer = document.getElementById('total-answer');
+let correctAnswer = document.getElementById('accepted-answer');
 
 let questions = [
     {
-        article : '"The area that became [...] was first inhabited by groups of hunter–gatherers 13,000 years ago.The predominant tribe at the moment of the arrival of Europeans was the Charrúa people, when the Portuguese first established Colónia do Sacramento in 1680; [...] was colonized by Europeans late relative to neighboring countries. [...] won its independence between 1811 and 1828, following a four-way struggle between Portugal and Spain, and later Argentina and Brazil."',
+        article : '<p>"The area that became [...] was first inhabited by groups of hunter–gatherers 13,000 years ago.</p> The predominant tribe at the moment of the arrival of Europeans was the Charrúa people, when the Portuguese first established Colónia do Sacramento in 1680; [...] was colonized by Europeans late relative to neighboring countries. [...] won its independence between 1811 and 1828, following a four-way struggle between Portugal and Spain, and later Argentina and Brazil."',
         choiceA : "Peru",
         choiceB : "Columbia",
         choiceC : "Uruguay",
@@ -27,7 +27,7 @@ let questions = [
         
         
     },{
-        article : '"Present-day [...] traces its historic and cultural identity to Lan Xang, which existed from the 14th century to the 18th century as one of the largest kingdoms in Southeast Asia.Because of its central geographical location in Southeast Asia, the kingdom became a hub for overland trade and became wealthy economically and culturally.After a period of internal conflict, Lan Xang broke into three separate kingdoms—Luang Phrabang, Vientiane, and Champasak."',
+        article : '"Present-day [...] traces its historic and cultural identity to Lan Xang, which existed from the 14th century to the 18th century as one of the largest kingdoms in Southeast Asia. Because of its central geographical location in Southeast Asia, the kingdom became a hub for overland trade and became wealthy economically and culturally.After a period of internal conflict, Lan Xang broke into three separate kingdoms—Luang Phrabang, Vientiane, and Champasak."',
         choiceA : "Thailand",
         choiceB : "Laos",
         choiceC : "Cambodia",
@@ -49,7 +49,7 @@ let questions = [
         choiceB : "Turqmenistan",
         choiceC : "Georgia",
         choiceD : "Kazakhstan",
-        imgSrc : "url('horse-urgensh-g9753c1ee3_1280.jpg')",
+        imgSrc : "url('../assets/img/horse-urgench-g9753c1ee3_1280.jpg')",
         correct : "B"
         
     },{
@@ -58,7 +58,7 @@ let questions = [
         choiceB : "Bulgaria",
         choiceC : "Romania",
         choiceD : "Hungary",
-        imgSrc : "url('transilvania-g55524fa54_1280.jpg')",
+        imgSrc : "url('../assets/img/fog-gca4a45b58_1280.jpg')",
         correct : "C"
         }
         
@@ -85,7 +85,7 @@ startButton.addEventListener("click", startGame,);
 
 // render a question
 
-const numberOfQuestions = questions.length - 1;
+const numberOfQuestions = questions.length ;
 let currentQuestionIndex = 0;
 
 
@@ -111,9 +111,10 @@ function renderQuestion(){
 
 function checkAnswer(answer){
     if(questions[currentQuestionIndex].correct == answer){
-        acceptedAnswer++;
+        incrementCorrectAnswer();
     }
-    currentQuestionIndex++
+    currentQuestionIndex++;
+    totalNumberAnswers();
 
     if(currentQuestionIndex < numberOfQuestions){
         renderQuestion();
@@ -121,12 +122,19 @@ function checkAnswer(answer){
         endGame();
     }
 }
-
 /**
- * for (var i = 0; i < answers.length; i++){
-    answers[i].addEventListener('click', checkAnswer)
+ * Increment correct and total answer
+ */
+
+function incrementCorrectAnswer() {
+    let oldScore = parseInt(document.getElementById("accepted-answer").innerText);
+    document.getElementById("accepted-answer").innerText = ++oldScore;
 }
-**/
+
+function totalNumberAnswers() {
+    let oldNumberAnswers = parseInt(document.getElementById("total-answer").innerText);
+    document.getElementById("total-answer").innerText = ++oldNumberAnswers;
+}
 
 //Game progress
 
@@ -138,11 +146,13 @@ function gameProgress(){
 
 // Game Ending 
 
-let score = acceptedAnswer+totalAnswer
+let score = correctAnswer+totalAnswer;
+let counter = document.getElementById('counter');
 
 function endGame(){
     gameArea.style.display = 'none';
     gameEnd.style.display = 'flex';
+    document.getElementById("game-end-txt").innerText = `Well done for getting this far! :D You have a result of ${counter.innerText} Feel free to try again if you want to improve your score and learn while having fun!`
 
 }
 let playAgainButton = document.getElementsByClassName('play-again')[0];
@@ -151,5 +161,5 @@ playAgainButton.addEventListener('click', playAgain);
 
 function playAgain(){
     gameEnd.style.display = 'none';
-    startGame()
+    window.location.reload();
 }
